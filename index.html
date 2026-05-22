@@ -771,11 +771,18 @@
       .nav-links { display: none; }
       section { padding: 80px 24px; }
       #hero { padding: 0 24px 80px; }
-      .hero-stats { left: 24px; flex-wrap: wrap; gap: 8px; }
+      .hero-stats { left: 24px; right: 24px; flex-wrap: wrap; gap: 8px; }
+      .stat-pill { flex: 1 1 calc(50% - 8px); border-radius: 4px !important; border: 1px solid var(--glass-bdr) !important; }
       .hero-scroll-hint { display: none; }
       .about-layout { grid-template-columns: 1fr; }
+      .skills-grid { display: flex; flex-wrap: wrap; }
+      .skill-tag { flex: 1 1 auto; text-align: center; }
+      .modal-box { padding: 32px 20px 24px; }
       footer { flex-direction: column; gap: 12px; text-align: center; }
       .divider { margin: 0 24px; }
+      
+      body, a, button, .gallery-card, .modal-close { cursor: auto !important; }
+      #cursor-box { display: none !important; }
     }
   </style>
 </head>
