@@ -349,6 +349,7 @@
       white-space: nowrap;
       position: relative;
       padding-bottom: 16px;
+      scroll-margin-top: calc(50vh - 150px);
     }
     
     .grid-4-5::-webkit-scrollbar, 
@@ -825,7 +826,7 @@
 
   <!-- NAV -->
   <nav id="main-nav">
-    <a href="#hero" class="nav-logo">STUDIO<span>.</span></a>
+    <a href="#hero" class="nav-logo">FREELANCER<span>.</span></a>
     <ul class="nav-links">
       <li><a href="#work">Work</a></li>
       <li><a href="#about">About</a></li>
@@ -840,7 +841,7 @@
     <div class="hero-content">
       <div class="hero-eyebrow reveal">Graphic Design Portfolio</div>
       <h1 class="hero-name reveal" style="transition-delay:.1s">
-        YOUR<br><span class="accent-word">NAME</span>
+        INFRUNUS<br><span class="accent-word">PRIME</span>
       </h1>
       <p class="hero-sub reveal" style="transition-delay:.2s">
         Visual identity &amp; creative direction
@@ -852,15 +853,15 @@
     </div>
     <div class="hero-stats">
       <div class="stat-pill">
-        <div class="stat-num">200+</div>
+        <div class="stat-num">50+</div>
         <div class="stat-lbl">Projects</div>
       </div>
       <div class="stat-pill">
-        <div class="stat-num">5+</div>
+        <div class="stat-num">6+</div>
         <div class="stat-lbl">Years Exp.</div>
       </div>
       <div class="stat-pill">
-        <div class="stat-num">50+</div>
+        <div class="stat-num">10+</div>
         <div class="stat-lbl">Clients</div>
       </div>
     </div>
@@ -900,7 +901,7 @@
     </div>
 
     <!-- Logos -->
-    <div class="gallery-category reveal">
+    <div class="gallery-category reveal" style="display: none;">
       <div class="gallery-category-label">Logos</div>
       <div class="grid-1-1" id="grid-logos"></div>
     </div>
@@ -914,9 +915,7 @@
     <div class="about-layout">
       <div class="about-photo reveal-left">
         <div class="about-photo-inner">
-          <svg viewBox="0 0 24 24" stroke-width=".6">
-            <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-          </svg>
+          <img src="profile.jpg" alt="Infrunus Prime" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
         </div>
         <div class="about-photo-badge">
           <span>∞</span>
@@ -929,22 +928,15 @@
           DESIGN THAT<br>MOVES PEOPLE
         </h2>
         <p class="bio">
-          I'm a graphic designer obsessed with the intersection of bold visual identity and purposeful storytelling.
-          From social campaigns to immersive brand experiences, every pixel is intentional.
-        </p>
-        <p class="bio">
-          Specialising in brand identity, digital illustration, merchandise design, and content creation —
-          I help brands look extraordinary and communicate authentically.
+          Creative graphic designer with over 5 years of experience crafting visually engaging designs across social media, posters, thumbnails, and merchandise. Skilled in creating impactful visuals tailored to different audiences and brand identities, with experience working with clients across multiple genres and industries. Passionate about combining creativity and strategy to deliver designs that stand out and connect.
         </p>
         <div class="skills-grid">
-          <div class="skill-tag">Brand Identity</div>
-          <div class="skill-tag">Social Media Design</div>
-          <div class="skill-tag">Poster & Print</div>
-          <div class="skill-tag">Merch Design</div>
-          <div class="skill-tag">Typography</div>
-          <div class="skill-tag">Motion Graphics</div>
-          <div class="skill-tag">Logo Design</div>
-          <div class="skill-tag">Content Creation</div>
+          <a href="#grid-merch" class="skill-tag" style="text-decoration:none;">Brand Identity</a>
+          <a href="#grid-social" class="skill-tag" style="text-decoration:none;">Social Media Design</a>
+          <a href="#grid-posters" class="skill-tag" style="text-decoration:none;">Poster & Print</a>
+          <a href="#grid-merch" class="skill-tag" style="text-decoration:none;">Merch Design</a>
+          <a href="#grid-posters" class="skill-tag" style="text-decoration:none;">Typography</a>
+          <a href="#grid-social" class="skill-tag" style="text-decoration:none;">Content Creation</a>
         </div>
       </div>
     </div>
@@ -964,7 +956,7 @@
       </p>
       <div class="contact-links reveal" style="transition-delay:.15s">
         <!-- Gmail -->
-        <a href="mailto:you@gmail.com" class="contact-link" title="Gmail">
+        <a href="mailto:infurnusarts14@gmail.com" class="contact-link" title="Gmail">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="M2 7l10 7 10-7"/>
@@ -972,7 +964,7 @@
           <span>Gmail</span>
         </a>
         <!-- Instagram -->
-        <a href="https://instagram.com/" target="_blank" rel="noopener" class="contact-link" title="Instagram">
+        <a href="https://www.instagram.com/rasterized_pixels/" target="_blank" rel="noopener" class="contact-link" title="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <rect x="2" y="2" width="20" height="20" rx="5"/>
             <circle cx="12" cy="12" r="4"/>
@@ -981,24 +973,15 @@
           <span>Instagram</span>
         </a>
         <!-- Discord -->
-        <a href="https://discord.com/" target="_blank" rel="noopener" class="contact-link" title="Discord">
+        <a href="https://discordapp.com/users/721302314073456671" target="_blank" rel="noopener" class="contact-link" title="Discord">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
           </svg>
           <span>Discord</span>
         </a>
-        <!-- Reddit -->
-        <a href="https://reddit.com/" target="_blank" rel="noopener" class="contact-link" title="Reddit">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M16 11.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-8 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
-            <path d="M9.5 15.5s.833 1 2.5 1 2.5-1 2.5-1"/>
-            <circle cx="16.5" cy="6.5" r="1.5"/><line x1="15.5" y1="7.5" x2="13" y2="9.5"/>
-          </svg>
-          <span>Reddit</span>
-        </a>
+
         <!-- Fiverr -->
-        <a href="https://fiverr.com/" target="_blank" rel="noopener" class="contact-link" title="Fiverr">
+        <a href="https://www.fiverr.com/users/infurnus_prime/seller_dashboard" target="_blank" rel="noopener" class="contact-link" title="Fiverr">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
             <path d="M8 13h5M11 9v8"/>
@@ -1013,7 +996,6 @@
   <!-- FOOTER -->
   <footer>
     <p>© 2025 Studio. All rights reserved.</p>
-    <p>Built with intention &amp; obsession.</p>
   </footer>
 
   <!-- MODAL -->
