@@ -919,7 +919,7 @@
         </div>
         <div class="about-photo-badge">
           <span>∞</span>
-          <small>Creating since 2019</small>
+          <small>Creating since 2020</small>
         </div>
       </div>
       <div class="about-text reveal-right">
@@ -995,7 +995,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 Studio. All rights reserved.</p>
+    <p>© 2026 INFURNUS PRIME. All rights reserved.</p>
   </footer>
 
   <!-- MODAL -->
@@ -1057,15 +1057,15 @@
 
         const projects = {
       social: [
-        { title:'Aircraft Post', tag:'Social', image:'social/AIRCRAFT POST.jpg' },
-        { title:'Arcane', tag:'Social', image:'social/ARCANE.jpg' }, 
-        { title:'Burger Ad', tag:'Social', image:'social/BURGER AD.jpg' },
-        { title:'Coffee Spot', tag:'Social', image:'social/COFFEE SPOT AD.jpg' }, 
-        { title:'Grace', tag:'Social', image:'social/GRACE.jpg' },
-        { title:'Magazine', tag:'Social', image:'social/MAGAZINE.jpg' }, 
-        { title:'Omen', tag:'Social', image:'social/OMEN.jpg' },
-        { title:'Recruitment Post', tag:'Social', image:'social/RECRUITMENT POST.jpg' },
-        { title:'Thank You', tag:'Social', image:'social/THANK YOU POST.jpg' }
+        { title:'Aircraft Post', tag:'Social', image:'social/AIRCRAFT POST.jpg', desc:'A futuristic and authoritative aerospace design that highlights innovation, precision, and advanced defense technology.' },
+        { title:'Arcane', tag:'Social', image:'social/ARCANE.jpg', desc:'A sense of cinematic intensity and curiosity, like stepping into a dark, emotionally charged world worth exploring.' }, 
+        { title:'Burger Ad', tag:'Social', image:'social/BURGER AD.jpg', desc:'A vibrant and appetizing food promotion designed to create craving, excitement, and instant visual appeal.' },
+        { title:'Coffee Spot', tag:'Social', image:'social/COFFEE SPOT AD.jpg', desc:'A warm, cozy, and premium café vibe that encourages viewers to connect with the brand experience.' }, 
+        { title:'Grace', tag:'Social', image:'social/GRACE.jpg', desc:'Calm sophistication and softness, evoking elegance, serenity, and refined beauty.' },
+        { title:'Magazine', tag:'Social', image:'social/MAGAZINE.jpg', desc:'Mystery, elegance, and introspection — making the viewer pause and feel intrigued by what lies beneath.' }, 
+        { title:'Omen', tag:'Social', image:'social/OMEN.jpg', desc:'A dark, cinematic gaming-inspired composition that delivers an intense and immersive character-driven experience.' },
+        { title:'Recruitment Post', tag:'Social', image:'social/RECRUITMENT POST.jpg', desc:'A bold and energetic recruitment design crafted to create excitement, urgency, and strong audience engagement.' },
+        { title:'Thank You', tag:'Social', image:'social/THANK YOU POST.jpg', desc:'Warmth, trust, and appreciation — making the customer feel valued and emotionally connected to the brand.' }
       ],
       posters: [
         { title:'Aerospace Event', tag:'Poster', image:'posters/AEROSPACE EVENT POSTER.jpg' }, 
@@ -1117,7 +1117,7 @@
           <div class="card-overlay-tag">${item.tag}</div>
         </div>
       `;
-      card.addEventListener('click', () => openModal(item.title, item.tag, item.image));
+      card.addEventListener('click', () => openModal(item.title, item.tag, item.image, item.desc));
       return card;
     }
 
@@ -1165,9 +1165,9 @@
     /* ── MODAL ────────────────────────────────── */
     const overlay  = document.getElementById('modal-overlay');
     const closeBtn = document.getElementById('modal-close-btn');
-    function openModal(title, tag, imageUrl) {
+    function openModal(title, tag, imageUrl, desc) {
       document.getElementById('modal-title').textContent = title;
-      document.getElementById('modal-desc').textContent  = `Project category: ${tag}. Visual identity and creative direction for ${title}.`;
+      document.getElementById('modal-desc').textContent  = desc ? desc : `Project category: ${tag}. Visual identity and creative direction for ${title}.`;
       const imgEl = document.getElementById('modal-img');
       const placeholder = document.getElementById('modal-placeholder');
       if (imageUrl) {
