@@ -344,7 +344,7 @@
       background: var(--glass-bdr);
     }
 
-        .grid-4-5, .grid-16-9, .grid-1-1 {
+        .grid-4-5, .grid-16-9, .grid-9-16, .grid-1-1 {
       overflow-x: auto;
       white-space: nowrap;
       position: relative;
@@ -354,16 +354,19 @@
     
     .grid-4-5::-webkit-scrollbar, 
     .grid-16-9::-webkit-scrollbar, 
+    .grid-9-16::-webkit-scrollbar, 
     .grid-1-1::-webkit-scrollbar {
       height: 2px;
     }
     .grid-4-5::-webkit-scrollbar-track, 
     .grid-16-9::-webkit-scrollbar-track, 
+    .grid-9-16::-webkit-scrollbar-track, 
     .grid-1-1::-webkit-scrollbar-track {
       background: var(--surface); 
     }
     .grid-4-5::-webkit-scrollbar-thumb, 
     .grid-16-9::-webkit-scrollbar-thumb, 
+    .grid-9-16::-webkit-scrollbar-thumb, 
     .grid-1-1::-webkit-scrollbar-thumb {
       background: var(--glass-bdr); 
       border-radius: 3px;
@@ -377,6 +380,7 @@
 
     .grid-4-5 .gallery-card { width: 280px; flex-shrink: 0; }
     .grid-16-9 .gallery-card { width: 440px; flex-shrink: 0; }
+    .grid-9-16 .gallery-card { width: 280px; flex-shrink: 0; }
     .grid-1-1 .gallery-card { width: 300px; flex-shrink: 0; }
 
     /* ── scroll arrows ── */
@@ -455,6 +459,7 @@
     /* aspect ratios */
     .ar-4-5  { aspect-ratio: 4/5; }
     .ar-16-9 { aspect-ratio: 16/9; }
+    .ar-9-16 { aspect-ratio: 9/16; }
     .ar-1-1  { aspect-ratio: 1/1; }
 
     /* placeholder content inside cards */
@@ -511,7 +516,7 @@
     }
 
     /* ─── ABOUT ──────────────────────────────────────────────── */
-    #about { background: rgba(27, 36, 53, 0.4); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    #about { background: rgba(27, 36, 53, 0.4); }
     .about-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -750,7 +755,7 @@
       position: absolute;
       inset: 0;
       pointer-events: none;
-      mix-blend-mode: screen;
+      will-change: transform, opacity;
     }
     .global-light-fx::before {
       background: radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.2) 0%, transparent 60%);
@@ -907,10 +912,10 @@
       <div class="grid-16-9" id="grid-thumbs"></div>
     </div>
 
-    <!-- Logos -->
-    <div class="gallery-category reveal" style="display: none;">
-      <div class="gallery-category-label">Logos</div>
-      <div class="grid-1-1" id="grid-logos"></div>
+    <!-- Brand Design -->
+    <div class="gallery-category reveal">
+      <div class="gallery-category-label">Brand Design</div>
+      <div class="grid-9-16" id="grid-brand"></div>
     </div>
   </section>
 
@@ -1169,7 +1174,7 @@
     populate('grid-posters',  projects.posters, 'ar-4-5');
     populate('grid-merch',    projects.merch,   'ar-16-9');
     populate('grid-thumbs',   projects.thumbs,  'ar-16-9');
-    populate('grid-logos',    projects.logos,   'ar-1-1');
+    populate('grid-brand',    projects.logos,   'ar-9-16');
 
     /* ── MODAL ────────────────────────────────── */
     const overlay  = document.getElementById('modal-overlay');
